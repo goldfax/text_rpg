@@ -1,31 +1,4 @@
-class Item
-	attr_accessor :stats, :use, :description
-end
-
-class Monster
-	attr_accessor :level, :exp, :name, :role
-
-	def stats         # 1 is mage, 2 is warrior, 3 is rogue (integer value for the @role variable)
-		if @role == 1
-			@p_att = 10
-			@m_att = 20
-			@p_def = 10
-			@m_def = 2
-		elsif @role == 2
-			@p_att = 20
-			@m_att = 10
-			@m_def = 10
-			@p_def = 2
-		elsif @role == 3
-			@p_att = 15
-			@m_att = 15
-			@m_def = 6
-			@p_def = 6
-		end
-	end
-end
-
-def menu
+def main_menu
 	puts "Hi and welcome to the game of Mageia, where you can"
 	puts "have all sorts of fun. Here are your options:"
 	puts "1. New character"
@@ -56,4 +29,4 @@ def menu
 end
 
 
-menu
+main_menu
