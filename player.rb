@@ -7,10 +7,28 @@ class Player
 		end
 	end
 
+	def fight
+		if adj_monst
+		else
+		end
+	end
+
+	def adj_monst                 #if there is an adjacent monster the 
+		if          
+			true
+		else
+			false
+		end
+	end
+
+	def position
+		
+	end
+
 	def death
 		if @health == 0
 			puts "GAME OVER"
-			exit
+			exit     #the game will exit without saving
 		end
 	end
 
