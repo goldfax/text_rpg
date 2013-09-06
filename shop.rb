@@ -1,5 +1,5 @@
 class Shop
-	attr_accessor :item, :name, :gold
+	attr_accessor :item, :name, :gold, :type
 	def shop_menu
 		puts "Welcome to #{@name}. How may I help you?" 
 		puts "1. Buy\n2.Sell\n3.Conversation\n4.Exit"
