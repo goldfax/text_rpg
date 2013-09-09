@@ -22,4 +22,4 @@ class Shop
 			puts "Thank you for your patronage!"
 		end
 	end
-end
+end 
