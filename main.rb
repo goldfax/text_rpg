@@ -1,3 +1,9 @@
+#require_relative 'item'
+#require_relative 'map'
+#require_relative 'monster'
+require_relative 'player'
+#require_relative 'shop'
+
 def main_menu
 	puts "Hi and welcome to the game of Mageia, where you can"
 	puts "have all sorts of fun. Here are your options:"
@@ -9,20 +15,20 @@ def main_menu
 	if choice == 1  # if choice is (1) then create character with name, role, gender
 		puts "What would you like your name to be?"
 		charname = gets.chomp
-		puts "What would you like your role to be? (1. Mage, 2. Warrior, 3. Rogue)?"
-		charrole = gets.chomp.to_i
-		puts "What would you like your gender to be? (1.Male, 2.Female)?"
-		chargender = gets.chomp.to_i
+		puts "What would you like your role to be? (1. Mage, 2. Warrior, 3. Rogue)?"  #for now will have people type in the string
+		charrole = gets.chomp
+		puts "What would you like your gender to be? (Male, Female)?"  #for now will have people type in the string
+		chargender = gets.chomp
 		newchar = Player.new
 		newchar.level = 1
 		newchar.exp = 0
 		newchar.name = charname
 		newchar.role = charrole
 		newchar.gender = chargender
-		puts "Your character's name is #{newchar.get_name},\nyour character's role is #{newchar.get_role},\nyour character's gender is #{newchar.get_gender}"
+		puts "Your character's name is #{newchar.name},\nyour character's role is #{newchar.role},\nyour character's gender is #{newchar.gender}"
 	#elsif choice == 2    #if the choice is two then load up the saved data of a character
 	#elsif choice == 3    #if the choice is three then give an options menu -- add music, graphics?
-	#elsif choice == 4    #exit the program with the message goodbye
+	elsif choice == 4    #exit the program with the message goodbye
 		puts "Goodbye"
 		exit
 	end
