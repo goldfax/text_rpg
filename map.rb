@@ -1,8 +1,8 @@
 class Map
-	attr_accessor :region, :name   #map name, and region accessor methods added auto
+	attr_accessor :name   #map name accessor methods auto added
 	def initialize width height
 		@width = width
 		@height = height
-		@map = [@height][@width]  #initialize an array with the given height and width parameters
+		@map = Array.new(width, Array.new(height)) #when entering in values for the size of the map make it into a square
 	end
 end
