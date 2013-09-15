@@ -1,3 +1,5 @@
+require_relative 'map'
+
 class Player
 	attr_accessor :level, :exp, :name, :gender, :role, :gold               #there may be some gender specific actions that one can take
 	
@@ -22,7 +24,6 @@ class Player
 	end
 
 	def position
-		git 
 	end
 =end
 	def death
@@ -66,5 +67,12 @@ class Player
 	end
 
 	#def player_menu               #display character stats -- health, patt, matt, pdef, mdef -- also give options to save and exit the game
+	#end
+
+	#def change_maps           #need a method for the character to move to different maps - preferably when the character is on the edge of on map
+	#end
+
+	#def which_map
+		#return map.name
 	#end
 end
