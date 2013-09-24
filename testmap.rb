@@ -18,11 +18,12 @@ class Map
    def get_player_position
      @map.each do |x , y|
        if @map[x][y] != 0
-         @map[x][y]
+         return map[x][y]
        end
      end
    end
 end
   
 map = Map.new 4, 6
+map.get_player_position
 
