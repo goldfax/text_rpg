@@ -7,7 +7,7 @@ class Map
    def initialize height, width
      @height = height
      @width = width
-     @map = Array.new(@height, 0) {Array.new(@width, 0)}
+     @map = Array.new(@height, 0) {Array.new(@width)}
    end
    
    def set_player_position
