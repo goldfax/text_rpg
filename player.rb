@@ -2,7 +2,7 @@ require_relative 'map'
 
 class Player
 	attr_accessor :level, :exp, :name, :gender, :role, :gold               #there may be some gender specific actions that one can take
-	
+	@@id = 1
 	def level_up
 		if @exp >= 100
 			@level += 1

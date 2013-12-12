@@ -38,9 +38,7 @@ def main_menu
 end
 
 def save(file)
-	file = File.open(savefile.txt)
-	file.write("#{file}")
-	file.close
+	File.open("#{file}.txt", 'w') { |file| file.write("#{file}") }
 end
 
 
