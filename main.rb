@@ -26,13 +26,23 @@ def main_menu
 		newchar.role = charrole
 		newchar.gender = chargender
 		puts "Your character's name is #{newchar.name},\nyour character's role is #{newchar.role},\nyour character's gender is #{newchar.gender}"
-	#elsif choice == 2    #if the choice is two then load up the saved data of a character
+	elsif choice == 2    #if the choice is two then load up the saved data of a character
+		print "Enter desired name for save file: "
+		filename = gets.chomp
+		save(filename)
 	#elsif choice == 3    #if the choice is three then give an options menu -- add music, graphics?
 	elsif choice == 4    #exit the program with the message goodbye
 		puts "Goodbye"
 		exit
 	end
 end
+
+def save(file)
+	file = File.open(savefile.txt)
+	file.write("#{file}")
+	file.close
+end
+
 
 
 main_menu
