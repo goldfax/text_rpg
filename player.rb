@@ -1,5 +1,3 @@
-require_relative 'map'
-
 class Player
 	attr_accessor :level, :exp, :name, :gender, :role, :gold               #there may be some gender specific actions that one can take
 	@@id = 1
@@ -29,7 +27,7 @@ class Player
 	def death
 		if @health == 0
 			puts "GAME OVER"
-			exit     #the game will exit without saving
+			exit     #the game will exit without saving -- will change to restarting at last checkpoint
 		end
 	end
 
