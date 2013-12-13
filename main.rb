@@ -46,6 +46,12 @@ def main_menu
 		elsif option == 3
 			puts "What would you like to change your character's role to?"
 			newchar.role = gets.chomp
+		elsif option == 4
+			puts "What would you like to change your character age to?"
+			newchar.age == gets.chomp.to_i
+		else
+			puts "Please enter a correct option."
+		end
 	elsif choice == 4    #exit the program with the message goodbye
 		puts "Goodbye"
 		exit
