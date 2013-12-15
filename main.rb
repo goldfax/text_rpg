@@ -16,6 +16,7 @@ def main
 		elsif main_menu == 3
 			options_menu
 		elsif main_menu == 4
+			puts "Thank you for trying the game :D"
 			exit
 		else
 			puts "Please enter a correct choice (1, 2, 3, 4)."
