@@ -101,6 +101,8 @@ def exit_to_main_menu
 	main_menu
 end
 
+main
+
 =begin
 	if choice == 1  # if choice is (1) then create character with name, role, gender
 		puts "What would you like your name to be?"
