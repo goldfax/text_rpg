@@ -6,10 +6,11 @@ require_relative 'player'
 
 
 def main
-	main_menu
-	bool = true
-	while bool == true
-		if main_menu == 1
+	main_menu                                  ##########################################
+	#bool = true															 #            there is an issue           #
+ 	#while bool == true                        #       with this right now things will  #
+                                             #        need to be figured out to solve #
+		if main_menu == 1                        ##########################################
 			new_character
 		elsif main_menu == 2
 			load_saved_game
@@ -21,8 +22,8 @@ def main
 		else
 			puts "Please enter a correct choice (1, 2, 3, 4)."
 		end
-		bool = false
-	end
+		#bool = false
+	#end
 end
 
 def main_menu
@@ -72,8 +73,8 @@ def options_menu
 			change_character_role
 		elsif option == 4
 			exit_to_main_menu
-		else
-			puts "Please enter a correct choice. (1, 2, 3, 4)."
+		else                                    
+			puts "Please enter a correct choice. (1, 2, 3, 4)."    #check the response of the user
 		end
 		bool = false
 	end
@@ -103,6 +104,12 @@ end
 
 main
 
+
+
+#########################################################################
+# Basically deciding whether to use above code, or bottom code for menu #
+#                                                                       #
+#########################################################################
 =begin
 	if choice == 1  # if choice is (1) then create character with name, role, gender
 		puts "What would you like your name to be?"

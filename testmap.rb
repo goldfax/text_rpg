@@ -17,9 +17,7 @@ class Map
    end
    def get_player_position
      @map.each do |x , y|
-       if @map[x][y] != 0
-         return map[x][y]
-       end
+        return map[x][y] if @map[x][y] != 0
      end
    end
 end
