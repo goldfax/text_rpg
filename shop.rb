@@ -17,6 +17,7 @@ class Shop
         puts "1. Bronze Armour set ------- 200 gp ------- The weakest protection, still better than nothing\n2. Iron armour set ------- 400 gp ------- Stronger than the bronze armour set\n3. Steel Armour set ------- 600 gp ------- Stronger then the Iron Armour set\n4. Silver Armour set ------- 800 gp ------- Strongest Armour set that you can buy in a common shop."
       end
 		elsif answer == 2  #show list of items able to sell -- items in inventory (not quest items)
+			
 		elsif answer == 3  #print some generic conversation -- special conversations are specific to certain instances of the class
 		elsif answer == 4
 			puts "Thank you for your patronage!"

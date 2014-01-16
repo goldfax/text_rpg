@@ -1,7 +1,7 @@
 class Player
-	attr_accessor :level, :exp, :name, :gender, :role, :gold      #there may be some gender specific actions that one can take      
+	attr_accessor :level, :exp, :name, :gender, :role, :gold , :age     #there may be some gender specific actions that one can take      
 	## @@id is to identify the character on a map array
-	@unique_id = rand(1..100) + rand(100..500) + rand(1000..5000)
+	@unique_id = rand(1..100) + rand(100..500) + rand(1000..5000) + rand(5000..10000)
 	def level_up
 		if @exp >= 100
 			@level += 1
