@@ -1,6 +1,7 @@
 class Player
-	attr_accessor :level, :exp, :name, :gender, :role, :gold               #there may be some gender specific actions that one can take
-	@@id = 1
+	attr_accessor :level, :exp, :name, :gender, :role, :gold      #there may be some gender specific actions that one can take      
+	## @@id is to identify the character on a map array
+	@unique_id = rand(1..100) + rand(100..500) + rand(1000..5000)
 	def level_up
 		if @exp >= 100
 			@level += 1
@@ -46,8 +47,8 @@ class Player
 		if @role == 1
 			@p_att = 10
 			@m_att = 20
-			@p_def = 10
-			@m_def = 2
+			@p_def = 2
+			@m_def = 10
 			@health = 500
 		elsif @role == 2
 			@p_att = 20             #stats --- nothing really concrete just made up numbers, maybe should store the stats in a hash
