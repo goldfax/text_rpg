@@ -6,24 +6,27 @@ require_relative 'player'
 
 
 def main
-	main_menu                                  ##########################################
-	#bool = true															 #            there is an issue           #
- 	#while bool == true                        #       with this right now things will  #
-                                             #        need to be figured out to solve #
-		if main_menu == 1                        ##########################################
+	bool = false
+	while bool == false
+	main_value = main_menu                                  
+		case main_value 
+		when 1                     
 			new_character
-		elsif main_menu == 2
+			bool = true
+		when 2
 			load_saved_game
-		elsif main_menu == 3
+			bool = true
+		when 3
 			options_menu
-		elsif main_menu == 4
+			bool = true
+		when 4
 			puts "Thank you for trying the game :D"
 			exit
 		else
 			puts "Please enter a correct choice (1, 2, 3, 4)."
+			bool = false
 		end
-		#bool = false
-	#end
+	end
 end
 
 def main_menu
@@ -49,34 +52,39 @@ def new_character
 	newchar.exp = 0
 	newchar.name = charname
 	newchar.role = charrole
-	newchar.gender = gender
+	newchar.gender = chargender
 	puts "This is the end of character creation I hope you enjoy playing the game :D"
 end
 
-def load_saved_game   #don't know how to do this quite yet, figure it out sometime
+def load_saved_game   #don't know how to do this quite yet, figure it out sometime, need yaml knowledge
 end
 
-def options_menu
+def options_menu                      ####right now the options menu is pretty useless
 	bool = true
+	while bool == true
 	puts "What would you like to do?"
 	puts "1. Change character name"
 	puts "2. Change character gender"
 	puts "3. Change character role"
-	puts "5. Exit to main menu"
+	puts "4. Exit to main menu"
 	option = gets.chomp.to_i
-	while bool == true
-		if option == 1
+		case option
+		when 1
 			change_character_name
-		elsif option == 2
+			bool == false
+		when 2
 			change_character_gender
-		elsif option == 3
+			bool == false
+		when 3
 			change_character_role
-		elsif option == 4
+			bool == false
+		when 4
 			exit_to_main_menu
+			bool == false
 		else                                    
-			puts "Please enter a correct choice. (1, 2, 3, 4)."    #check the response of the user
+			puts "Please enter a correct choice. (1, 2, 3, 4)."       #check the response of the user
+			bool == true
 		end
-		bool = false
 	end
 end
 
@@ -163,10 +171,5 @@ main
 	end
 end
 
-
-
-def save(file)
-	File.open("#{file}.txt", 'w') { |file| file.write("This is a saved game.") }
-end
 =end
 
