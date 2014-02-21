@@ -54,10 +54,11 @@ def new_character
 	newchar.role = charrole
 	newchar.gender = chargender
 	puts "This is the end of character creation I hope you enjoy playing the game :D"
+	###need to initialize the game here somehow
 end
 
 def load_saved_game   #don't know how to do this quite yet, figure it out sometime, need yaml knowledge
-	
+	yaml.load()   #specify which file to load ----- this will be input from the user in the player class and used here
 end
 
 def options_menu                      ####right now the options menu is pretty useless
@@ -84,7 +85,6 @@ def options_menu                      ####right now the options menu is pretty u
 			bool == false
 		else                                    
 			puts "Please enter a correct choice. (1, 2, 3, 4)."       #check the response of the user
-			bool == true
 		end
 	end
 end
@@ -112,3 +112,4 @@ def exit_to_main_menu
 end
 
 main
+

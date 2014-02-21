@@ -65,8 +65,16 @@ class Player
 		end
 	end
 
-	#def player_menu               #display character stats -- health, patt, matt, pdef, mdef -- also give options to save and exit the game
-	#end
+	def player_menu               #display character stats -- health, patt, matt, pdef, mdef -- also give options to save and exit the game
+		puts "PLAYER STATS"      
+		puts "----------------"
+		puts "|#{self.health}|" 
+		puts "|#{self.p_att} |"
+		puts "|#{self.m_att} |"
+		puts "|#{self.p_def} |"
+		puts "|#{self.m_def} |"
+		puts "----------------"
+	end
 
 	#def change_maps           #need a method for the character to move to different maps - preferably when the character is on the edge of on map
 	#end
